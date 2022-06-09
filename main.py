@@ -14,5 +14,5 @@ def home():
     return "Welcome to FastAPI !!!"
 
 @app.put("/addBook/{book_id}")
-def add_book(book_id: int, book: Book):
-    return {"book_id": book_id, "title": book.title}
+def add_book(book_id: int, book: Book = None):
+    return {"book_id": book_id, "title_book": book.title}
